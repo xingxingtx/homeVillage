@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_H5DusJuiEemKULVlhjOKCQ" name="PapyrusImport">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_IJMccJuiEemKULVlhjOKCQ">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:StateMachine" xmi:id="_H7afIJuiEemKULVlhjOKCQ" name="StateMachine1">
+    <region xmi:type="uml:Region" xmi:id="_H8WTQJuiEemKULVlhjOKCQ" name="Region1">
+      <transition xmi:type="uml:Transition" xmi:id="_tAt74J1lEem3rs2M_3NO9A" source="_ON_n0J1gEem3rs2M_3NO9A" target="_S118sJ1gEem3rs2M_3NO9A">
+        <trigger xmi:type="uml:Trigger" xmi:id="_8JstMJ1lEem3rs2M_3NO9A" event="_kEXr8J1lEem3rs2M_3NO9A"/>
+      </transition>
+      <transition xmi:type="uml:Transition" xmi:id="_MR7VAJ1mEem3rs2M_3NO9A" source="_S118sJ1gEem3rs2M_3NO9A" target="_IJangJ1mEem3rs2M_3NO9A">
+        <trigger xmi:type="uml:Trigger" xmi:id="_jgDBcJ1mEem3rs2M_3NO9A" event="_WFC04J1mEem3rs2M_3NO9A"/>
+      </transition>
+      <transition xmi:type="uml:Transition" xmi:id="_Aj9ckJ1nEem3rs2M_3NO9A" source="_IJangJ1mEem3rs2M_3NO9A" target="_7OdXgJ1mEem3rs2M_3NO9A">
+        <trigger xmi:type="uml:Trigger" xmi:id="_D0_vgJ1nEem3rs2M_3NO9A" event="_3_pSIJ1mEem3rs2M_3NO9A"/>
+      </transition>
+      <transition xmi:type="uml:Transition" xmi:id="_fTazgJ1nEem3rs2M_3NO9A" source="_7OdXgJ1mEem3rs2M_3NO9A" target="_S118sJ1gEem3rs2M_3NO9A">
+        <trigger xmi:type="uml:Trigger" xmi:id="_1BbYEJ1nEem3rs2M_3NO9A" event="_pi104J1nEem3rs2M_3NO9A"/>
+      </transition>
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_ON_n0J1gEem3rs2M_3NO9A" name="Initial1"/>
+      <subvertex xmi:type="uml:State" xmi:id="_S118sJ1gEem3rs2M_3NO9A" name="drafted"/>
+      <subvertex xmi:type="uml:State" xmi:id="_IJangJ1mEem3rs2M_3NO9A" name="published"/>
+      <subvertex xmi:type="uml:State" xmi:id="_7OdXgJ1mEem3rs2M_3NO9A" name="factorTransfered"/>
+    </region>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Signal" xmi:id="_bgzIYJ1lEem3rs2M_3NO9A" name="drafte"/>
+  <packagedElement xmi:type="uml:SignalEvent" xmi:id="_kEXr8J1lEem3rs2M_3NO9A" name="SignalEventDraft" signal="_bgzIYJ1lEem3rs2M_3NO9A"/>
+  <packagedElement xmi:type="uml:Signal" xmi:id="_QCCwoJ1mEem3rs2M_3NO9A" name="publish"/>
+  <packagedElement xmi:type="uml:SignalEvent" xmi:id="_WFC04J1mEem3rs2M_3NO9A" name="SignalEventpublished" signal="_QCCwoJ1mEem3rs2M_3NO9A"/>
+  <packagedElement xmi:type="uml:Signal" xmi:id="_0wRMEJ1mEem3rs2M_3NO9A" name="factorTransfere"/>
+  <packagedElement xmi:type="uml:SignalEvent" xmi:id="_3_pSIJ1mEem3rs2M_3NO9A" name="factorTransfered" signal="_0wRMEJ1mEem3rs2M_3NO9A"/>
+  <packagedElement xmi:type="uml:SignalEvent" xmi:id="_pi104J1nEem3rs2M_3NO9A" name="transferedBacked" visibility="public" signal="_wzn64J1nEem3rs2M_3NO9A"/>
+  <packagedElement xmi:type="uml:Signal" xmi:id="_wzn64J1nEem3rs2M_3NO9A" name="transferedBacke"/>
+</uml:Model>

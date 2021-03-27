@@ -1,0 +1,35 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/homevillage?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    username: root
+    password: root
+    type: com.alibaba.druid.pool.DruidDataSource
+  banner:
+    location: classpath:/templates/banner.txt
+
+#状态机uml文件路径配置
+statemachine:
+  plugins:
+    path:
+      umlFilePath1: /templates/refac-base.uml
+      umlFilePath2: /templates/refac-main.uml
+      umlFilePath3: /templates/news-notice.uml
+
+#日志文件配置
+logging:
+  config: classpath:logback.xml
+  level:
+    com:
+      dao: debug
+
+#swagger
+swagger:
+  enable:
+    isOpen: true
+    path: /homeVillage
+
+mybatis:
+  mapper-locations: classpath:/templates/mapper/*Mapper.xml
+  type-aliases-package: com.wei.model
+  config-location: classpath:mybatis-config.xml

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_oOfHwB56Eeu7rMP5VlxqrA" name="news-notice">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_oU4qsB56Eeu7rMP5VlxqrA">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:StateMachine" xmi:id="_oPl7AB56Eeu7rMP5VlxqrA" name="newsNoticeStateMachine">
+    <region xmi:type="uml:Region" xmi:id="_oPyIQB56Eeu7rMP5VlxqrA" name="Region1">
+      <transition xmi:type="uml:Transition" xmi:id="__C-MMB56Eeu7rMP5VlxqrA" source="_1pvzAB56Eeu7rMP5VlxqrA" target="_7q6rQB56Eeu7rMP5VlxqrA"/>
+      <transition xmi:type="uml:Transition" xmi:id="_cHXIcB57Eeu7rMP5VlxqrA" source="_7q6rQB56Eeu7rMP5VlxqrA" target="_IoIvoB57Eeu7rMP5VlxqrA">
+        <trigger xmi:type="uml:Trigger" xmi:id="_rNWlQB59Eeu7rMP5VlxqrA" event="_-d-W0B58Eeu7rMP5VlxqrA"/>
+      </transition>
+      <transition xmi:type="uml:Transition" xmi:id="_eLpUYB57Eeu7rMP5VlxqrA" source="_IoIvoB57Eeu7rMP5VlxqrA" target="_RlVUIB57Eeu7rMP5VlxqrA">
+        <trigger xmi:type="uml:Trigger" xmi:id="_10NPMB59Eeu7rMP5VlxqrA" event="_xAu5IB59Eeu7rMP5VlxqrA"/>
+      </transition>
+      <transition xmi:type="uml:Transition" xmi:id="_p1_boB57Eeu7rMP5VlxqrA" source="_7q6rQB56Eeu7rMP5VlxqrA" target="_AnQCYB57Eeu7rMP5VlxqrA">
+        <trigger xmi:type="uml:Trigger" xmi:id="_HWByEB58Eeu7rMP5VlxqrA" event="_DTeioB58Eeu7rMP5VlxqrA"/>
+      </transition>
+      <transition xmi:type="uml:Transition" xmi:id="_tGne4B57Eeu7rMP5VlxqrA" source="_AnQCYB57Eeu7rMP5VlxqrA" target="_7q6rQB56Eeu7rMP5VlxqrA">
+        <trigger xmi:type="uml:Trigger" xmi:id="_R-NRsB58Eeu7rMP5VlxqrA" event="_OiFwIB58Eeu7rMP5VlxqrA"/>
+      </transition>
+      <transition xmi:type="uml:Transition" xmi:id="_28gJcB58Eeu7rMP5VlxqrA" source="_7q6rQB56Eeu7rMP5VlxqrA" target="_0IyrsB58Eeu7rMP5VlxqrA">
+        <trigger xmi:type="uml:Trigger" xmi:id="_42hmIB58Eeu7rMP5VlxqrA" event="_mh0fsB58Eeu7rMP5VlxqrA"/>
+      </transition>
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_1pvzAB56Eeu7rMP5VlxqrA" name="Initial1"/>
+      <subvertex xmi:type="uml:State" xmi:id="_7q6rQB56Eeu7rMP5VlxqrA" name="published"/>
+      <subvertex xmi:type="uml:State" xmi:id="_AnQCYB57Eeu7rMP5VlxqrA" name="modified"/>
+      <subvertex xmi:type="uml:State" xmi:id="_IoIvoB57Eeu7rMP5VlxqrA" name="putOnShelvesed"/>
+      <subvertex xmi:type="uml:State" xmi:id="_RlVUIB57Eeu7rMP5VlxqrA" name="pullOffShelvesed"/>
+      <subvertex xmi:type="uml:State" xmi:id="_0IyrsB58Eeu7rMP5VlxqrA" name="deleted"/>
+    </region>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Signal" xmi:id="_7iJ7YB57Eeu7rMP5VlxqrA" name="modifiy"/>
+  <packagedElement xmi:type="uml:SignalEvent" xmi:id="_DTeioB58Eeu7rMP5VlxqrA" name="SignalEventModifiy" signal="_7iJ7YB57Eeu7rMP5VlxqrA"/>
+  <packagedElement xmi:type="uml:Signal" xmi:id="_LCy-wB58Eeu7rMP5VlxqrA" name="publish"/>
+  <packagedElement xmi:type="uml:SignalEvent" xmi:id="_OiFwIB58Eeu7rMP5VlxqrA" name="SignalEventPublish" signal="_LCy-wB58Eeu7rMP5VlxqrA"/>
+  <packagedElement xmi:type="uml:Signal" xmi:id="_UAiV0B58Eeu7rMP5VlxqrA" name="delete"/>
+  <packagedElement xmi:type="uml:SignalEvent" xmi:id="_mh0fsB58Eeu7rMP5VlxqrA" name="SignalEventDelete" signal="_UAiV0B58Eeu7rMP5VlxqrA"/>
+  <packagedElement xmi:type="uml:Signal" xmi:id="_8PyoAB58Eeu7rMP5VlxqrA" name="putOnShelves"/>
+  <packagedElement xmi:type="uml:SignalEvent" xmi:id="_-d-W0B58Eeu7rMP5VlxqrA" name="SignalEventPutOnShelves" signal="_8PyoAB58Eeu7rMP5VlxqrA"/>
+  <packagedElement xmi:type="uml:Signal" xmi:id="_vEi5QB59Eeu7rMP5VlxqrA" name="pullOffShelves"/>
+  <packagedElement xmi:type="uml:SignalEvent" xmi:id="_xAu5IB59Eeu7rMP5VlxqrA" name="SignalEventPullOffShelves" signal="_vEi5QB59Eeu7rMP5VlxqrA"/>
+</uml:Model>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>com.wei</groupId>
+        <artifactId>startCommon</artifactId>
+        <version>1.0.0-wei</version>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.wei</groupId>
+    <artifactId>homeVillage</artifactId>
+    <version>1.0.0-wei</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>homevillage-service-api</module>
+        <module>homevillage-service-impl</module>
+        <module>homevillae-service-ws</module>
+    </modules>
+    <properties>
+        <startcommon.version>1.0.0-wei</startcommon.version>
+        <maven-assembly-plguin>2.4</maven-assembly-plguin>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.wei</groupId>
+            <artifactId>common-configs</artifactId>
+            <version>${startcommon.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.wei</groupId>
+            <artifactId>common-utils</artifactId>
+            <version>${startcommon.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+        <!--druid连接池-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>1.1.9</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.baomidou/mybatis-plus -->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus</artifactId>
+            <version>3.0.5</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+    </build>
+</project>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wei.mapper.UserMapper">
+    <resultMap id="userModel" type="com.wei.model.user.UserModel">
+
+    </resultMap>
+    <sql id="baseSql">
+            id,
+            user_name as userName,
+            login_name as loginName,
+            password,
+            sex,
+            address
+    </sql>
+
+   <!-- <select id="selectUser" resultType="com.wei.model.user.UserModel" parameterType="com.wei.model.user.UserModel ">
+        SELECT
+        <include refid="baseSql"/>
+        FROM sys_hv_user where 1 = 1
+        <if test="vm.userName != null and vm.userName != ''">
+            and user_name = #{vm.userName}
+        </if>
+        <if test="vm.id != null">
+            and id = #{vm.id}
+        </if>
+    </select>-->
+
+
+    <update id="deleteUser" parameterType="com.wei.model.user.UserModel">
+        update sys_hv_user set state = -1
+        where 1 = 1
+        <if test="vm.id != null">
+            and id = #{vm.id}
+        </if>
+        <if test="vm.loginName != null and vm.loginName != ''">
+            and login_name = #{vm.loginName}
+        </if>
+    </update>
+
+
+    <update id="updateUser" parameterType="com.wei.model.user.UserModel">
+        update sys_hv_user set
+        <if test="model.password != null and model.password != ''">
+            login_name = #{vm.loginName}
+        </if>
+    </update>
+
+
+    <insert id="insertUser" parameterType="com.wei.model.user.UserModel">
+        insert into sys_hv_user
+        (user_name,login_name,password,sex,address)
+        values
+        (#{model.userName},#{model.loginName},#{model.password},#{model.sex},#{model.address})
+    </insert>
+
+    <update id="updatePassword" parameterType="com.wei.model.user.UserModel">
+        update sys_hv_user set
+        <if test="model.password != null and model.password != ''">
+            password = #{model.password}
+        </if>
+    </update>
+
+    <!--<select id="selectUserList" resultType="com.wei.model.user.UserModel">
+        SELECT
+        <include refid="baseSql"/>
+        FROM sys_hv_user where 1 = 1
+    </select>-->
+</mapper>
