@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <parent>
-        <groupId>com.wei</groupId>
-        <artifactId>startCommon</artifactId>
-        <version>1.0.0-wei</version>
-    </parent>
-
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.wei</groupId>
     <artifactId>homeVillage</artifactId>
@@ -21,6 +15,7 @@
     <properties>
         <startcommon.version>1.0.0-wei</startcommon.version>
         <maven-assembly-plguin>2.4</maven-assembly-plguin>
+        <mysql-connector.vsersion>8.0.20</mysql-connector.vsersion>
     </properties>
 
     <dependencies>
@@ -38,6 +33,7 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql-connector.vsersion}</version>
         </dependency>
         <!--druid连接池-->
         <dependency>

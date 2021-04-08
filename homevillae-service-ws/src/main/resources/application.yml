@@ -5,3 +5,4 @@ spring:
     name: homeVillage
 server:
   port: 8081
+  shutdown: graceful
