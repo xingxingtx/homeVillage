@@ -1,4 +1,4 @@
-package com.wei.exception;
+package com.wei.base.exception;
 
 /**
  * @author a_pen

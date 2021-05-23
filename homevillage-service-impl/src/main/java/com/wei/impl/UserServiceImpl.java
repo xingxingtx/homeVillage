@@ -1,11 +1,11 @@
 package com.wei.impl;
 
-import com.wei.exception.UserBusinessException;
+import com.wei.base.exception.UserBusinessException;
 import com.wei.mapper.UserMapper;
 import com.wei.model.user.UserModel;
 import com.wei.model.user.UserModelVM;
 import com.wei.service.IUserService;
-import com.wei.utils.generate.StringUtils;
+import com.wei.utils.utils.StringUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Service;
@@ -47,7 +47,7 @@ public class UserServiceImpl  implements IUserService {
     @Override
     public int updatePassword(UserModelVM vm) {
         String errorMessage =  validatePassword(vm);
-        if(!StringUtils.isEmpty(errorMessage, false)){
+        if(!StringUtil.isEmpty(errorMessage, false)){
             throw new UserBusinessException(errorMessage);
         }
         return userMapper.updatePassword(vm);
@@ -80,12 +80,12 @@ public class UserServiceImpl  implements IUserService {
      */
     private String validatePassword(UserModelVM vm) {
         String result = null;
-        if(!StringUtils.lengthValidate(vm.getPassword(), 6, 20)){
+        if(!StringUtil.lengthValidate(vm.getPassword(), 6, 20)){
             result = "密码长度应该在6-20字符";
         }
         /**查询密码是否与原密码一致*/
         UserModel user = userMapper.selectUser(vm);
-        if(!StringUtils.isEmpty(vm.getPassword(), false) && vm.getPassword().equals(user.getPassword())){
+        if(!StringUtil.isEmpty(vm.getPassword(), false) && vm.getPassword().equals(user.getPassword())){
             result = "与原密码一致";
         }
         return result;

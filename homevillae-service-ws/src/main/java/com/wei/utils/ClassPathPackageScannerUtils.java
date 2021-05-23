@@ -2,7 +2,7 @@ package com.wei.utils;
 
 import com.wei.dto.ApiMessage;
 import com.wei.utils.excel.ExcelUtils;
-import com.wei.utils.generate.StringUtils;
+import com.wei.utils.utils.StringUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -55,12 +55,12 @@ public class ClassPathPackageScannerUtils {
      */
     public List<String>  doScannerFile(){
         log.info("start doScanner...");
-        String path = StringUtils.dotToSplash(this.backPackage);
+        String path = StringUtil.dotToSplash(this.backPackage);
         URL resource = this.classLoader.getResource(path);
-        String filePath = StringUtils.getRootPath(resource);
+        String filePath = StringUtil.getRootPath(resource);
         List<String> classNames = null;
-        if(StringUtils.isEmpty(filePath, false)){return null;}
-        if(StringUtils.isExtension(filePath, ".jar")){
+        if(StringUtil.isEmpty(filePath, false)){return null;}
+        if(StringUtil.isExtension(filePath, ".jar")){
             log.info("filePath is .jar:{}", filePath);
             classNames = readFromJarFile(filePath, path);
         }else {
@@ -81,7 +81,7 @@ public class ClassPathPackageScannerUtils {
             if(listFile.isDirectory()){
                 readFromDirectory(listFile.getPath());
             }else {
-                fileList.add(StringUtils.getClassPath(listFile.getPath()));
+                fileList.add(StringUtil.getClassPath(listFile.getPath()));
             }
         }
         return fileList;
@@ -101,7 +101,7 @@ public class ClassPathPackageScannerUtils {
             while (null != jarEntry){
                 String name = jarEntry.getName();
                 if(name.startsWith(path)){
-                    list.add(StringUtils.getClassPath(name));
+                    list.add(StringUtil.getClassPath(name));
                 }
                 jarEntry = jarInputStream.getNextJarEntry();
             }

@@ -2,7 +2,6 @@ package com.wei.controller.lottery;
 
 import com.wei.model.lottery.LotteryModel;
 import com.wei.model.lottery.LotteryVM;
-import com.wei.model.user.UserModelVM;
 import com.wei.service.lottery.ILotteryService;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;

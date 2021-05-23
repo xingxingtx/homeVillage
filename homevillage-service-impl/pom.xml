@@ -4,7 +4,7 @@
     <parent>
         <groupId>com.wei</groupId>
         <artifactId>homeVillage</artifactId>
-        <version>1.2.0-wei</version>
+        <version>${homevillage.version}</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.wei</groupId>
@@ -26,7 +26,7 @@
         <dependency>
             <groupId>com.wei</groupId>
             <artifactId>homevillage-service-api</artifactId>
-            <version>1.2.0-wei</version>
+            <version>${project.version}</version>
         </dependency>
     </dependencies>
 

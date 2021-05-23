@@ -13,7 +13,7 @@
             address
     </sql>
 
-   <!-- <select id="selectUser" resultType="com.wei.model.user.UserModel" parameterType="com.wei.model.user.UserModel ">
+   <!-- <select id="selectUser" resultType="UserModel" parameterType="UserModel ">
         SELECT
         <include refid="baseSql"/>
         FROM sys_hv_user where 1 = 1
@@ -60,7 +60,7 @@
         </if>
     </update>
 
-    <!--<select id="selectUserList" resultType="com.wei.model.user.UserModel">
+    <!--<select id="selectUserList" resultType="UserModel">
         SELECT
         <include refid="baseSql"/>
         FROM sys_hv_user where 1 = 1
