@@ -17,6 +17,8 @@
         <startcommon.version>1.2.0-wei</startcommon.version>
         <maven-assembly-plguin>2.4</maven-assembly-plguin>
         <mysql-connector.vsersion>8.0.20</mysql-connector.vsersion>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
 
     <dependencies>
